@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Astronaut Jobs — Platform Pencari Kerja All-in-One</title>
+<meta name="description" content="Jelajahi 30+ platform kerja, lacak lamaran, cek kecocokan, dan buat CV profesional dalam satu tempat.">
+<meta name="theme-color" content="#040a16">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Astronaut Jobs — Karier Bukan Gravitasi.">
+<meta property="og:description" content="Jelajahi 30+ platform kerja, lacak lamaran, cek kecocokan, dan buat CV profesional dalam satu tempat.">
+<meta property="og:image" content="assets/hero-rocket.png">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<style>body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/*LP-CSS-START*/
+/* Layout: one 1200px column; the rocket bleeds off the top-right of the hero, every block below sits on glass panels over a star field. Single committed dark look (deep space + gold). */
+:root,.lp{
+  --bg:#040a16;--bg2:#071022;
+  --fg:#f3f6ff;--mut:rgba(200,212,236,.74);--dim:rgba(200,212,236,.5);
+  --gold:#f4c65c;--gold2:#e2a63a;--gold3:#ffe39a;--gold-ink:#1a1204;
+  --line:rgba(132,168,230,.18);--line-gold:rgba(244,198,92,.38);
+  --glass:rgba(9,18,38,.6);--glass2:rgba(12,24,48,.82);
+  --blue:#3b7bff;--violet:#7c4dff;--cyan:#27c6ff;--green:#35d39a;
+  --font-d:'Plus Jakarta Sans',Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-b:Inter,'Plus Jakarta Sans',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  color-scheme:dark;
+}
+.lp{background:var(--bg);color:var(--fg);font-family:var(--font-b);line-height:1.55;min-height:100vh;position:relative;overflow-x:hidden;-webkit-font-smoothing:antialiased;letter-spacing:-.005em}
+.lp *,.lp *::before,.lp *::after{box-sizing:border-box;margin:0;padding:0}
+.lp img{max-width:100%;display:block}
+.lp a{color:inherit;text-decoration:none}
+.lp button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.lp :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.lp .stars{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.9}
+.lp .glow{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0}
+.lp .g1{top:-10rem;left:-12rem;width:40rem;height:40rem;background:radial-gradient(circle,rgba(124,77,255,.32),transparent 68%)}
+.lp .g2{top:36rem;right:-16rem;width:44rem;height:44rem;background:radial-gradient(circle,rgba(59,123,255,.22),transparent 68%)}
+.lp .g3{top:118rem;left:-14rem;width:38rem;height:38rem;background:radial-gradient(circle,rgba(39,198,255,.16),transparent 68%)}
+.lp .wr{width:100%;max-width:1232px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));position:relative;z-index:2}
+/* nav */
+.lp .nav{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .35s,border-color .35s,box-shadow .35s;border-bottom:1px solid transparent}
+.lp .nav.solid{background:rgba(4,10,22,.78);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-color:var(--line);box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.lp .nb{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:74px}
+.lp .brand{display:inline-flex;align-items:center;gap:.65rem;font-family:var(--font-d);font-weight:800;font-size:1.02rem;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.lp .brand .mk{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;flex:0 0 auto;color:var(--gold-ink);
+  background:radial-gradient(circle at 35% 30%,#ffe9a8,#f0b53f 55%,#c47d12);box-shadow:0 0 0 1px rgba(255,226,150,.35),0 6px 22px rgba(244,198,92,.38)}
+.lp .brand .mk svg{width:20px;height:20px;transform:rotate(-8deg)}
+.lp .brand span{background:linear-gradient(95deg,#ffe8a8,#f4c65c 55%,#e2a63a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lp .nl{display:flex;gap:2.1rem;list-style:none;font-size:.9rem;font-weight:500}
+.lp .nl a{color:rgba(228,236,252,.8);position:relative;padding:.35rem 0;transition:color .25s}
+.lp .nl a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;border-radius:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.lp .nl a:hover,.lp .nl a.on{color:#fff}
+.lp .nl a:hover::after,.lp .nl a.on::after{transform:scaleX(1)}
+.lp .na{display:flex;align-items:center;gap:.6rem}
+.lp .burger{display:none;width:42px;height:42px;border-radius:10px;border:1px solid var(--line);background:var(--glass);place-items:center}
+.lp .burger svg{width:20px;height:20px}
+.lp .mob{display:none;border-top:1px solid var(--line);background:rgba(4,10,22,.96);backdrop-filter:blur(18px)}
+.lp .mob.open{display:block}
+.lp .mob a{display:block;padding:.95rem 0;border-bottom:1px solid var(--line);font-weight:500}
+.lp .mob .na{padding:1rem 0 1.2rem}
+/* buttons */
+.lp .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border-radius:999px;font-family:var(--font-d);font-weight:700;font-size:.9rem;padding:.72rem 1.35rem;white-space:nowrap;transition:transform .25s,box-shadow .25s,background .25s,border-color .25s;line-height:1}
+.lp .btn svg{width:16px;height:16px;flex:0 0 auto}
+.lp .btn-gold{color:var(--gold-ink);background:linear-gradient(100deg,#ffe49c 0%,#f4c65c 45%,#e2a63a 100%);box-shadow:0 8px 26px rgba(244,198,92,.32),inset 0 1px 0 rgba(255,255,255,.55)}
+.lp .btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(244,198,92,.45),inset 0 1px 0 rgba(255,255,255,.6)}
+.lp .btn-ghost{color:#fff;background:rgba(10,20,42,.55);border:1px solid rgba(160,190,240,.32);backdrop-filter:blur(12px)}
+.lp .btn-ghost:hover{border-color:rgba(244,198,92,.6);background:rgba(20,34,66,.7);transform:translateY(-2px)}
+.lp .btn-lg{padding:.95rem 1.7rem;font-size:.98rem}
+/* hero */
+.lp .hero{position:relative;padding-top:calc(74px + env(safe-area-inset-top,0px));overflow:hidden;z-index:1}
+.lp .hero-art{position:absolute;top:0;right:-2%;width:min(64%,790px);aspect-ratio:559/323;pointer-events:none;z-index:0;animation:lp-float 9s ease-in-out infinite}
+.lp .hero-art img{width:100%;height:100%;object-fit:cover;filter:saturate(1.12) contrast(1.05);
+  -webkit-mask-image:radial-gradient(ellipse 64% 80% at 60% 42%,#000 38%,rgba(0,0,0,.55) 64%,transparent 97%);
+  mask-image:radial-gradient(ellipse 64% 80% at 60% 42%,#000 38%,rgba(0,0,0,.55) 64%,transparent 97%)}
+.lp .hero-art::after{content:"";position:absolute;inset:auto -10% -20% -10%;height:50%;background:linear-gradient(180deg,transparent,var(--bg) 70%);pointer-events:none}
+@keyframes lp-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.lp .orbit{position:absolute;left:-18rem;top:14rem;width:60rem;height:60rem;border-radius:50%;border:1px solid rgba(244,198,92,.22);pointer-events:none;z-index:0;
+  -webkit-mask-image:linear-gradient(120deg,#000 20%,transparent 55%);mask-image:linear-gradient(120deg,#000 20%,transparent 55%)}
+.lp .orbit::before{content:"";position:absolute;top:9%;left:12%;width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 18px 4px rgba(244,198,92,.65)}
+.lp .hc{position:relative;z-index:2;max-width:560px;padding:4.2rem 0 2.6rem;animation:lp-rise .9s cubic-bezier(.16,1,.3,1) both}
+@keyframes lp-rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.lp .badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:600;color:#ffe3a2;padding:.48rem .95rem;border-radius:999px;border:1px solid var(--line-gold);background:rgba(20,22,30,.6);backdrop-filter:blur(10px);box-shadow:0 0 24px rgba(244,198,92,.12)}
+.lp .badge svg{width:14px;height:14px}
+.lp h1{font-family:var(--font-d);font-weight:800;font-style:italic;font-size:clamp(2.75rem,6.2vw,4.9rem);line-height:1.02;letter-spacing:-.035em;margin-top:1.35rem;text-wrap:balance}
+.lp h1 .w1{color:#fff;text-shadow:0 0 40px rgba(120,160,255,.25)}
+.lp h1 .gld{background:linear-gradient(95deg,#ffe9ad 0%,#f4c65c 48%,#dd9f33 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 24px rgba(244,198,92,.28))}
+.lp .lede{color:var(--mut);font-size:clamp(1rem,1.35vw,1.12rem);line-height:1.7;margin-top:1.25rem;max-width:33rem}
+.lp .row{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.lp .checks{display:flex;flex-wrap:wrap;gap:.7rem 1.6rem;margin-top:1.9rem;font-size:.84rem;font-weight:600;color:rgba(232,238,252,.9)}
+.lp .checks li{display:inline-flex;align-items:center;gap:.45rem;list-style:none}
+.lp .checks svg{width:16px;height:16px;color:var(--gold)}
+/* stats */
+.lp .stats{position:relative;z-index:3;margin-top:.5rem}
+.lp .stat-bar{display:grid;grid-template-columns:repeat(4,1fr);border-radius:18px;border:1px solid var(--line);background:var(--glass2);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 24px 70px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.05)}
+.lp .stat{display:flex;align-items:center;gap:.95rem;padding:1.35rem 1.6rem;min-width:0}
+.lp .stat+.stat{border-left:1px solid var(--line)}
+.lp .stat .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;color:var(--gold);background:rgba(244,198,92,.1);border:1px solid rgba(244,198,92,.22);flex:0 0 auto}
+.lp .stat .ic svg{width:24px;height:24px}
+.lp .stat b{display:block;font-family:var(--font-d);font-weight:800;font-size:1.55rem;letter-spacing:-.03em;line-height:1.1;font-variant-numeric:tabular-nums}
+.lp .stat small{display:block;color:var(--mut);font-size:.8rem;margin-top:.2rem}
+/* sections */
+.lp .sec{position:relative;z-index:1;padding-block:5.5rem 0}
+.lp .tag{display:inline-flex;align-items:center;gap:.45rem;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding:.42rem .9rem;border-radius:999px;border:1px solid var(--line-gold);background:rgba(244,198,92,.07)}
+.lp .tag svg{width:13px;height:13px}
+.lp h2{font-family:var(--font-d);font-weight:800;font-size:clamp(1.75rem,3.4vw,2.6rem);line-height:1.12;letter-spacing:-.03em;text-wrap:balance}
+.lp .sub{color:var(--mut);font-size:1rem;line-height:1.7;max-width:32rem;margin-top:1rem}
+.lp .split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:3rem;align-items:center}
+.lp .split h2{margin-top:1.1rem}
+/* devices */
+.lp .devices{position:relative;container-type:inline-size;width:100%;max-width:700px;margin-left:auto;aspect-ratio:700/420}
+.lp .laptop{position:absolute;left:0;top:0;width:80%}
+.lp .screen{position:relative;aspect-ratio:16/10;border-radius:14px 14px 6px 6px;background:#060b1a;border:7px solid #1b2340;border-bottom-width:12px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.06)}
+.lp .screen::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.06),transparent 40%);pointer-events:none}
+.lp .base{height:1.9cqw;margin:0 -3.5%;border-radius:0 0 1.2cqw 1.2cqw;background:linear-gradient(180deg,#2a3356,#151b31);box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.lp .base::after{content:"";display:block;width:18%;height:40%;margin:0 auto;border-radius:0 0 .6cqw .6cqw;background:#0d1226}
+.lp .ui{display:grid;grid-template-columns:27% 1fr;height:100%;font-size:1.55cqw;line-height:1.3}
+.lp .sb{border-right:1px solid rgba(132,168,230,.14);padding:1.6cqw 1.5cqw;background:rgba(10,18,40,.6)}
+.lp .sb .lg{display:flex;align-items:center;gap:.6cqw;font-family:var(--font-d);font-weight:800;font-size:1.35cqw;letter-spacing:.05em;color:var(--gold);margin-bottom:1.6cqw}
+.lp .sb .lg i{width:1.9cqw;height:1.9cqw;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffe9a8,#e2a63a);flex:0 0 auto}
+.lp .sb a{display:flex;align-items:center;gap:.7cqw;padding:.75cqw .9cqw;border-radius:.8cqw;color:var(--dim);font-size:1.35cqw}
+.lp .sb a i{width:1.3cqw;height:1.3cqw;border-radius:.35cqw;border:1px solid currentColor;opacity:.75}
+.lp .sb a.on{color:#fff;background:linear-gradient(90deg,rgba(124,77,255,.45),rgba(59,123,255,.25));box-shadow:inset 0 0 0 1px rgba(160,190,255,.25)}
+.lp .mn{padding:1.7cqw 2cqw;min-width:0}
+.lp .mn h4{font-family:var(--font-d);font-weight:800;font-size:2.4cqw;letter-spacing:-.02em;color:#fff}
+.lp .mn p{color:var(--dim);font-size:1.3cqw;margin-top:.25cqw}
+.lp .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1cqw;margin-top:1.6cqw}
+.lp .tile{padding:1.1cqw 1.2cqw;border-radius:1cqw;background:rgba(18,30,62,.75);border:1px solid rgba(132,168,230,.18)}
+.lp .tile small{display:block;color:var(--dim);font-size:1.15cqw}
+.lp .tile b{display:block;font-family:var(--font-d);font-weight:800;font-size:2.6cqw;line-height:1.1;margin-top:.3cqw;color:#fff}
+.lp .tile b em{font-style:normal;font-size:1.05cqw;color:var(--green);margin-left:.5cqw;font-weight:600}
+.lp .chart{margin-top:1.4cqw;border-radius:1cqw;background:rgba(10,18,40,.6);border:1px solid rgba(132,168,230,.14);padding:1cqw;position:relative}
+.lp .chart svg{width:100%;height:9.5cqw;display:block}
+.lp .chart .pill{position:absolute;top:.9cqw;right:1cqw;font-size:1.05cqw;color:#dfd0ff;background:rgba(124,77,255,.35);border:1px solid rgba(190,160,255,.4);border-radius:99px;padding:.3cqw .8cqw}
+.lp .phone{position:absolute;right:0;bottom:0;width:27%;border-radius:4.2cqw;background:#060b1a;border:6px solid #1b2340;box-shadow:0 30px 70px rgba(0,0,0,.65),0 0 60px rgba(124,77,255,.25);overflow:hidden;z-index:2;aspect-ratio:9/17.6}
+.lp .phone::before{content:"";position:absolute;top:1cqw;left:50%;transform:translateX(-50%);width:34%;height:1.4cqw;border-radius:99px;background:#0d1226}
+.lp .pui{padding:3.4cqw 1.6cqw 1.6cqw;font-size:1.3cqw;line-height:1.3}
+.lp .pui h5{font-family:var(--font-d);font-weight:800;font-size:2.05cqw;color:#fff;letter-spacing:-.02em}
+.lp .pui p{color:var(--dim);font-size:1.15cqw}
+.lp .gauge{width:68%;margin:1.4cqw auto 1.2cqw;position:relative}
+.lp .gauge svg{width:100%;height:auto;display:block;transform:rotate(-90deg)}
+.lp .gauge b{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--font-d);font-weight:800;font-size:3.6cqw;color:#fff;letter-spacing:-.03em;line-height:1}
+.lp .gauge b small{font-size:1.1cqw;color:var(--dim);font-weight:600;margin-top:.3cqw}
+.lp .pl{display:grid;gap:.6cqw}
+.lp .pl span{display:flex;align-items:center;gap:.6cqw;padding:.7cqw .8cqw;border-radius:.8cqw;background:rgba(18,30,62,.75);border:1px solid rgba(132,168,230,.18);color:#e8eefc;font-size:1.15cqw}
+.lp .pl svg{width:1.4cqw;height:1.4cqw;color:var(--green);flex:0 0 auto}
+/* feature cards */
+.lp .cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.1rem;margin-top:3.2rem}
+.lp .card{position:relative;padding:1.5rem 1.4rem 1.6rem;border-radius:20px;border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s;min-width:0}
+.lp .card::before{content:"";position:absolute;inset:0;background:radial-gradient(220px circle at 0% 0%,rgba(124,77,255,.22),transparent 60%);pointer-events:none}
+.lp .card:hover{transform:translateY(-4px);border-color:var(--line-gold);box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(244,198,92,.08)}
+.lp .card .ic{position:relative;width:46px;height:46px;border-radius:13px;display:grid;place-items:center;color:var(--gold);background:rgba(244,198,92,.1);border:1px solid rgba(244,198,92,.25)}
+.lp .card .ic svg{width:23px;height:23px}
+.lp .card h3{position:relative;font-family:var(--font-d);font-weight:800;font-size:1.08rem;letter-spacing:-.02em;margin-top:1.15rem}
+.lp .card p{position:relative;color:var(--mut);font-size:.88rem;line-height:1.6;margin-top:.5rem}
+/* platforms */
+.lp .plat{display:grid;grid-template-columns:minmax(0,1fr) repeat(3,minmax(0,1.05fr));gap:1.1rem;align-items:center;margin-top:1.1rem;padding:1.2rem 1.4rem;border-radius:22px;border:1px solid var(--line);background:rgba(9,18,38,.42)}
+.lp .plat h3{font-family:var(--font-d);font-weight:800;font-size:1.35rem;letter-spacing:-.025em}
+.lp .plat .ps{color:var(--mut);font-size:.86rem;line-height:1.55;margin-top:.4rem;max-width:21rem}
+.lp .pc{display:flex;align-items:center;gap:.8rem;padding:1rem 1rem;border-radius:16px;border:1px solid var(--line);background:var(--glass2);transition:transform .3s,border-color .3s;min-width:0}
+.lp .pc:hover{transform:translateY(-3px);border-color:var(--line-gold)}
+.lp .pc .ic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;flex:0 0 auto;color:var(--gold);background:rgba(244,198,92,.1);border:1px solid rgba(244,198,92,.22)}
+.lp .pc .ic svg{width:22px;height:22px}
+.lp .pc .flag{width:44px;height:44px;border-radius:50%;flex:0 0 auto;background:linear-gradient(180deg,#e0313f 50%,#f5f7fb 50%);box-shadow:inset 0 0 0 2px rgba(255,255,255,.12),0 4px 14px rgba(0,0,0,.4)}
+.lp .pc b{display:block;font-family:var(--font-d);font-weight:700;font-size:.95rem;letter-spacing:-.01em}
+.lp .pc small{display:block;color:var(--mut);font-size:.8rem;margin-top:.1rem}
+.lp .pc .chev{margin-left:auto;color:rgba(228,236,252,.7);width:18px;height:18px;flex:0 0 auto}
+/* testimonials + faq */
+.lp .trow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,4.2fr);gap:1.6rem;align-items:center}
+.lp .trow h2{font-size:clamp(1.5rem,2.4vw,1.9rem)}
+.lp .tcards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem}
+.lp .tc{display:flex;flex-direction:column;gap:1.1rem;padding:1.35rem 1.35rem 1.25rem;border-radius:20px;border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(14px);min-width:0;transition:transform .3s,border-color .3s}
+.lp .tc:hover{transform:translateY(-3px);border-color:var(--line-gold)}
+.lp .tc q{font-size:.92rem;line-height:1.65;color:#e7edfb;quotes:"\201C" "\201D"}
+.lp .who{display:flex;align-items:center;gap:.75rem;margin-top:auto}
+.lp .av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-family:var(--font-d);font-weight:800;font-size:.8rem;color:#fff;flex:0 0 auto;box-shadow:0 0 0 2px rgba(255,255,255,.12)}
+.lp .who b{display:block;font-size:.88rem;font-weight:700}
+.lp .who small{display:block;color:var(--mut);font-size:.76rem}
+.lp .starz{margin-left:auto;display:flex;gap:2px;color:var(--gold)}
+.lp .starz svg{width:13px;height:13px;fill:currentColor}
+.lp .frow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) minmax(0,2fr);gap:1.6rem;align-items:center;margin-top:2.4rem}
+.lp .frow h2{font-size:clamp(1.5rem,2.4vw,1.9rem)}
+.lp .astro{width:min(100%,250px);align-self:end;margin-bottom:-.6rem}
+.lp .astro svg{width:100%;height:auto;display:block;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5))}
+.lp .faq{display:grid;gap:.6rem}
+.lp .q{border-radius:14px;border:1px solid var(--line);background:var(--glass2);overflow:hidden;transition:border-color .3s}
+.lp .q:hover,.lp .q.open{border-color:var(--line-gold)}
+.lp .qh{width:100%;display:flex;align-items:center;gap:1rem;text-align:left;padding:.9rem 1.1rem;font-size:.93rem;font-weight:600;color:#f3f6ff}
+.lp .qh svg{width:18px;height:18px;margin-left:auto;flex:0 0 auto;color:var(--gold);transition:transform .35s}
+.lp .q.open .qh svg{transform:rotate(180deg)}
+.lp .qb{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s cubic-bezier(.16,1,.3,1)}
+.lp .q.open .qb{grid-template-rows:1fr}
+.lp .qb>div{overflow:hidden}
+.lp .qb p{padding:0 1.1rem 1.05rem;color:var(--mut);font-size:.88rem;line-height:1.7}
+.lp .moon{position:absolute;left:0;right:0;bottom:-6rem;height:16rem;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse 60% 100% at 18% 100%,rgba(140,150,175,.28),rgba(60,70,95,.12) 45%,transparent 70%)}
+/* cta */
+.lp .cta{position:relative;z-index:1;margin-top:3.4rem}
+.lp .cta-box{position:relative;display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:2.2rem 2.6rem;border-radius:24px;border:1px solid rgba(39,198,255,.35);background:linear-gradient(120deg,rgba(14,28,58,.9),rgba(10,20,44,.9));box-shadow:0 0 0 1px rgba(244,198,92,.12),0 30px 80px rgba(0,0,0,.5),0 0 70px rgba(39,198,255,.12);overflow:hidden}
+.lp .cta-box::before{content:"";position:absolute;inset:0;background:radial-gradient(500px circle at 15% 0%,rgba(124,77,255,.3),transparent 60%),radial-gradient(400px circle at 95% 100%,rgba(244,198,92,.14),transparent 60%);pointer-events:none}
+.lp .cta-box::after{content:"";position:absolute;left:8%;right:8%;bottom:0;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),var(--gold),transparent);opacity:.9}
+.lp .cta-box h2{position:relative;font-size:clamp(1.5rem,2.6vw,1.95rem)}
+.lp .cta-box p{position:relative;color:var(--mut);margin-top:.45rem;font-size:.98rem}
+.lp .cta-box .btn{position:relative;flex:0 0 auto}
+/* footer */
+.lp footer{position:relative;z-index:1;margin-top:4.5rem;padding-block:3.2rem 1.6rem;border-top:1px solid var(--line);background:linear-gradient(180deg,rgba(7,16,34,.3),rgba(4,10,22,.9))}
+.lp .fg{display:grid;grid-template-columns:1.6fr 1fr 1.3fr 1fr;gap:2rem}
+.lp .fg h4{font-family:var(--font-d);font-weight:800;font-size:.86rem;letter-spacing:.04em;margin-bottom:.95rem}
+.lp .fg ul{list-style:none;display:grid;gap:.55rem;font-size:.86rem;color:var(--mut)}
+.lp .fg ul a{transition:color .25s}
+.lp .fg ul a:hover{color:var(--gold)}
+.lp .fg .tagline{color:var(--mut);font-size:.86rem;line-height:1.65;max-width:17rem;margin-top:.9rem}
+.lp .kt li{display:flex;align-items:center;gap:.6rem}
+.lp .kt svg{width:16px;height:16px;color:var(--gold);flex:0 0 auto}
+.lp .soc{display:flex;gap:.6rem}
+.lp .soc a{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--glass2);display:grid;place-items:center;color:#eaf0ff;transition:border-color .25s,color .25s,transform .25s}
+.lp .soc a:hover{border-color:var(--line-gold);color:var(--gold);transform:translateY(-2px)}
+.lp .soc svg{width:17px;height:17px}
+.lp .copy{margin-top:2.6rem;padding-top:1.3rem;border-top:1px solid var(--line);text-align:center;color:var(--dim);font-size:.8rem}
+/* responsive */
+@media(max-width:1040px){
+  .lp .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .lp .plat{grid-template-columns:1fr 1fr}
+  .lp .plat>div:first-child{grid-column:1/-1}
+  .lp .tcards{grid-template-columns:1fr}
+  .lp .trow{grid-template-columns:minmax(0,1fr) minmax(0,2.4fr)}
+  .lp .frow{grid-template-columns:minmax(0,1fr) minmax(0,2.2fr);align-items:start}
+  .lp .frow h2{grid-column:2}
+  .lp .frow .faq{grid-column:2}
+  .lp .frow .astro{grid-row:1/3;align-self:end}
+  .lp .fg{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .lp .nl{display:none}
+  .lp .nb .na{display:none}
+  .lp .burger{display:grid}
+  .lp .hero-art{position:relative;right:auto;width:min(100%,560px);margin:1rem auto 0;animation:none}
+  .lp .hero-art::after{display:none}
+  .lp .hc{max-width:100%;text-align:center;padding-top:1.2rem}
+  .lp .hc .row,.lp .hc .checks{justify-content:center}
+  .lp .lede{margin-inline:auto}
+  .lp .stat-bar{grid-template-columns:1fr 1fr}
+  .lp .stat:nth-child(3){border-left:0}
+  .lp .stat:nth-child(n+3){border-top:1px solid var(--line)}
+  .lp .split{grid-template-columns:1fr;gap:2.2rem}
+  .lp .devices{margin-inline:auto}
+}
+@media(max-width:640px){
+  .lp .sec{padding-block:3.8rem 0}
+  .lp .hero-art{width:112%;margin-left:-6%}
+  .lp .hc{padding-bottom:1.6rem}
+  .lp .stat-bar{grid-template-columns:1fr}
+  .lp .stat{border-left:0!important;border-top:1px solid var(--line)}
+  .lp .stat:first-child{border-top:0}
+  .lp .cards{grid-template-columns:1fr}
+  .lp .plat{grid-template-columns:1fr;padding:1rem}
+  .lp .trow,.lp .frow{grid-template-columns:1fr}
+  .lp .frow h2,.lp .frow .faq{grid-column:auto}
+  .lp .frow .astro{grid-row:auto;width:150px;margin:0 auto}
+  .lp .cta-box{flex-direction:column;align-items:flex-start;padding:1.8rem 1.4rem}
+  .lp .cta-box .btn{width:100%}
+  .lp .fg{grid-template-columns:1fr}
+  .lp .brand{font-size:.9rem}
+}
+@media(prefers-reduced-motion:reduce){.lp *{animation:none!important;transition-duration:.01ms!important}}
+/*LP-CSS-END*/
+body{background:#040a16;margin:0}
+</style>
+</head>
+<body>
+<div class="lp" id="lp">
+<canvas class="stars" id="stars" aria-hidden="true"></canvas>
+<div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div>
+
+<nav class="nav" id="nav">
+  <div class="wr nb">
+    <a class="brand" href="#beranda" aria-label="Astronaut Jobs">
+      <span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span>
+      <span>Astronaut Jobs</span>
+    </a>
+    <ul class="nl">
+      <li><a href="#beranda" class="on">Beranda</a></li>
+      <li><a href="#fitur">Fitur</a></li>
+      <li><a href="#platform">Platform</a></li>
+      <li><a href="#testimoni">Testimoni</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="na">
+      <a class="btn btn-ghost" href="#masuk">Masuk</a>
+      <a class="btn btn-gold" href="#gabung">Gabung Misi <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+    <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="mob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="4" x2="20" y1="7" y2="7"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="17" y2="17"/></svg></button>
+  </div>
+  <div class="mob" id="mob">
+    <div class="wr">
+      <a href="#beranda">Beranda</a><a href="#fitur">Fitur</a><a href="#platform">Platform</a><a href="#testimoni">Testimoni</a><a href="#faq">FAQ</a>
+      <div class="na"><a class="btn btn-ghost" href="#masuk">Masuk</a><a class="btn btn-gold" href="#gabung">Gabung Misi</a></div>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="beranda">
+  <div class="orbit" aria-hidden="true"></div>
+  <div class="hero-art" aria-hidden="true"><img src="assets/hero-rocket.png" alt="" width="559" height="323"></div>
+  <div class="wr">
+    <div class="hc">
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg> Platform Pencari Kerja All-in-One</span>
+      <h1><span class="w1">Karier Bukan</span><br><span class="gld">Gravitasi.</span></h1>
+      <p class="lede">Jelajahi 30+ platform kerja, lacak lamaran, cek kecocokan, dan buat CV profesional dalam satu tempat.</p>
+      <div class="row">
+        <a class="btn btn-gold btn-lg" href="#gabung">Mulai Sekarang <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <a class="btn btn-ghost btn-lg" href="#fitur"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><polygon points="6 4 20 12 6 20 6 4"/></svg> Lihat Demo</a>
+      </div>
+      <ul class="checks">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>30+ Platform</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>CV Studio</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Fit Check 0–100</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Pelacakan Lamaran</li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<section class="stats"><div class="wr">
+  <div class="stat-bar">
+    <div class="stat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><div><b>18.000+</b><small>Pengguna Aktif</small></div></div>
+    <div class="stat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg></span><div><b>30+</b><small>Platform Kerja</small></div></div>
+    <div class="stat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span><div><b>42.000+</b><small>Lowongan Tersimpan</small></div></div>
+    <div class="stat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><div><b>87%</b><small>Pengguna Puas</small></div></div>
+  </div>
+</div></section>
+
+<section class="sec" id="fitur"><div class="wr">
+  <div class="split">
+    <div>
+      <span class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg> Fitur Utama</span>
+      <h2>Satu Platform, Semua Kebutuhan Kariermu</h2>
+      <p class="sub">Dari mencari lowongan hingga mendapat penawaran kerja, semuanya terintegrasi dalam satu ekosistem.</p>
+    </div>
+    <div class="devices" aria-hidden="true">
+      <div class="laptop">
+        <div class="screen"><div class="ui">
+          <div class="sb">
+            <div class="lg"><i></i>ASTRONAUT JOBS</div>
+            <a class="on"><i></i>Dashboard</a><a><i></i>Pencarian</a><a><i></i>Fit Check</a><a><i></i>CV Studio</a><a><i></i>Pelacakan</a><a><i></i>Pengaturan</a>
+          </div>
+          <div class="mn">
+            <h4>Halo, Astronaut! 👋</h4><p>Siap melanjutkan misi kariermu?</p>
+            <div class="tiles">
+              <div class="tile"><small>Lamaran Aktif</small><b>12<em>+3</em></b></div>
+              <div class="tile"><small>Wawancara</small><b>3<em>+1</em></b></div>
+              <div class="tile"><small>Penawaran</small><b>1<em>baru</em></b></div>
+            </div>
+            <div class="chart"><span class="pill">Progres 30 hari</span>
+              <svg viewBox="0 0 320 90" preserveAspectRatio="none"><defs><linearGradient id="lgA" x1="0" x2="1"><stop offset="0" stop-color="#7c4dff"/><stop offset="1" stop-color="#27c6ff"/></linearGradient><linearGradient id="lgB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7c4dff" stop-opacity=".45"/><stop offset="1" stop-color="#7c4dff" stop-opacity="0"/></linearGradient></defs>
+                <path d="M0 70 C30 68 40 60 60 58 S95 66 115 52 S150 30 175 38 S215 50 240 34 S285 18 320 14 L320 90 L0 90Z" fill="url(#lgB)"/>
+                <path d="M0 70 C30 68 40 60 60 58 S95 66 115 52 S150 30 175 38 S215 50 240 34 S285 18 320 14" fill="none" stroke="url(#lgA)" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="320" cy="14" r="3.5" fill="#27c6ff"/></svg>
+            </div>
+          </div>
+        </div></div>
+        <div class="base"></div>
+      </div>
+      <div class="phone"><div class="pui">
+        <h5>Fit Check</h5><p>Skor kecocokan</p>
+        <div class="gauge"><svg viewBox="0 0 100 100"><defs><linearGradient id="lgG" x1="0" x2="1"><stop offset="0" stop-color="#7c4dff"/><stop offset="1" stop-color="#27c6ff"/></linearGradient></defs><circle cx="50" cy="50" r="42" fill="none" stroke="rgba(132,168,230,.18)" stroke-width="9"/><circle cx="50" cy="50" r="42" fill="none" stroke="url(#lgG)" stroke-width="9" stroke-linecap="round" stroke-dasharray="242.8 263.9"/></svg><b>92<small>/100</small></b></div>
+        <div class="pl">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Kekuatan</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Celah Perbaikan</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Saran Peningkatan</span>
+        </div>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="cards">
+    <article class="card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><h3>Jelajah 30+ Platform</h3><p>Akses lowongan dari Indonesia, global, hingga remote.</p></article>
+    <article class="card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><h3>Fit Check 0–100</h3><p>Cek kecocokan skill dengan syarat pekerjaan secara objektif.</p></article>
+    <article class="card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><h3>CV Studio</h3><p>Buat, optimasi, dan sesuaikan CV dengan lowongan.</p></article>
+    <article class="card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></span><h3>Pelacakan Lamaran</h3><p>Pantau progres lamaran dari tersimpan hingga penawaran.</p></article>
+  </div>
+</div></section>
+
+<section class="sec" id="platform"><div class="wr">
+  <div class="plat">
+    <div><h3>30+ Platform dalam Satu Misi</h3><p class="ps">Akses langsung ke platform kerja terbaik di Indonesia, global, dan freelance.</p></div>
+    <a class="pc" href="#gabung"><span class="flag" aria-hidden="true"></span><span><b>Indonesia</b><small>18 Platform</small></span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+    <a class="pc" href="#gabung"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span><span><b>Global</b><small>8 Platform</small></span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+    <a class="pc" href="#gabung"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.859a10 10 0 0 1 14 0"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/></svg></span><span><b>Freelance &amp; Remote</b><small>4 Platform</small></span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+  </div>
+</div></section>
+
+<section class="sec" id="testimoni" style="overflow:hidden">
+  <div class="moon" aria-hidden="true"></div>
+  <div class="wr">
+    <div class="trow">
+      <h2>Apa Kata Pengguna?</h2>
+      <div class="tcards">
+        <article class="tc"><q>Sangat membantu! Sekarang pencarian kerja jadi lebih terarah dan efisien.</q><div class="who"><span class="av" style="background:linear-gradient(135deg,#3b7bff,#7c4dff)">RA</span><span><b>Rizky A.</b><small>Data Analyst</small></span><span class="starz" aria-label="5 dari 5 bintang"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span></div></article>
+        <article class="tc"><q>Fitur Fit Check-nya jujur dan realistis. CV saya jadi jauh lebih relevan.</q><div class="who"><span class="av" style="background:linear-gradient(135deg,#e2a63a,#ff6b9d)">NS</span><span><b>Nadia S.</b><small>Marketing Specialist</small></span><span class="starz" aria-label="5 dari 5 bintang"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span></div></article>
+        <article class="tc"><q>Pelacakan lamaran bikin saya tidak lagi lupa follow up interview. Keren banget!</q><div class="who"><span class="av" style="background:linear-gradient(135deg,#27c6ff,#35d39a)">FH</span><span><b>Fahrul H.</b><small>UI/UX Designer</small></span><span class="starz" aria-label="5 dari 5 bintang"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span></div></article>
+      </div>
+    </div>
+
+    <div class="frow" id="faq">
+      <div class="astro" aria-hidden="true">
+        <svg viewBox="0 0 300 300">
+          <defs>
+            <radialGradient id="aV" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#ffe9b0"/><stop offset=".45" stop-color="#f0b43f"/><stop offset="1" stop-color="#8a4d0c"/></radialGradient>
+            <linearGradient id="aS" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#b9c3d9"/></linearGradient>
+            <linearGradient id="aD" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9aa6c0"/><stop offset="1" stop-color="#5d6a88"/></linearGradient>
+            <radialGradient id="aM" cx="50%" cy="20%" r="80%"><stop offset="0" stop-color="#c9d0e0"/><stop offset=".6" stop-color="#7c879f"/><stop offset="1" stop-color="#3c4660"/></radialGradient>
+          </defs>
+          <ellipse cx="150" cy="262" rx="150" ry="34" fill="url(#aM)"/>
+          <ellipse cx="70" cy="262" rx="22" ry="7" fill="#5f6a86" opacity=".7"/><ellipse cx="205" cy="270" rx="16" ry="5" fill="#5f6a86" opacity=".6"/><ellipse cx="250" cy="256" rx="10" ry="3.5" fill="#5f6a86" opacity=".6"/>
+          <rect x="88" y="128" width="46" height="70" rx="14" fill="url(#aD)"/>
+          <rect x="196" y="178" width="46" height="26" rx="12" fill="url(#aS)" transform="rotate(-18 219 191)"/>
+          <ellipse cx="236" cy="210" rx="17" ry="11" fill="#2b3550"/>
+          <rect x="152" y="188" width="54" height="26" rx="12" fill="url(#aS)" transform="rotate(32 179 201)"/>
+          <ellipse cx="206" cy="232" rx="17" ry="11" fill="#2b3550"/>
+          <rect x="108" y="118" width="84" height="100" rx="30" fill="url(#aS)"/>
+          <rect x="122" y="150" width="56" height="34" rx="8" fill="#1f2740" opacity=".9"/>
+          <rect x="128" y="156" width="22" height="7" rx="3" fill="#27c6ff"/><circle cx="162" cy="160" r="3.6" fill="#f4c65c"/><circle cx="172" cy="160" r="3.6" fill="#ff5d73"/><rect x="128" y="168" width="44" height="4" rx="2" fill="#4c5a7e"/>
+          <rect x="108" y="138" width="84" height="8" rx="4" fill="#e04a5d" opacity=".85"/>
+          <rect x="178" y="146" width="42" height="26" rx="12" fill="url(#aS)" transform="rotate(50 199 159)"/>
+          <ellipse cx="213" cy="186" rx="12" ry="10" fill="#dfe5f2"/>
+          <rect x="82" y="146" width="40" height="26" rx="12" fill="url(#aS)" transform="rotate(-62 102 159)"/>
+          <ellipse cx="88" cy="192" rx="12" ry="10" fill="#dfe5f2"/>
+          <rect x="130" y="106" width="40" height="22" rx="8" fill="#9aa6c0"/>
+          <circle cx="150" cy="78" r="46" fill="url(#aS)"/>
+          <ellipse cx="154" cy="80" rx="33" ry="29" fill="url(#aV)"/>
+          <ellipse cx="143" cy="68" rx="12" ry="7" fill="#fff" opacity=".55" transform="rotate(-25 143 68)"/>
+          <circle cx="174" cy="92" r="4" fill="#fff" opacity=".35"/>
+          <path d="M104 78 a46 46 0 0 1 20-38" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+          <circle cx="118" cy="128" r="7" fill="#f4c65c"/>
+        </svg>
+      </div>
+      <h2>Pertanyaan yang Sering Diajukan</h2>
+      <div class="faq" id="faqlist">
+        <div class="q open"><button class="qh" aria-expanded="true">Apakah Astronaut Jobs gratis digunakan?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="qb"><div><p>Ya. Tanpa kartu kredit dan tanpa langganan tersembunyi. Semua fitur inti bisa dipakai sejak hari pertama.</p></div></div></div>
+        <div class="q"><button class="qh" aria-expanded="false">Apakah aman untuk akun saya?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="qb"><div><p>Aman. Astronaut Jobs tidak melamar otomatis dan tidak menyentuh akun platform mana pun. Pencarian dibuka langsung di situs resmi, dan kamu yang menekan tombol kirim.</p></div></div></div>
+        <div class="q"><button class="qh" aria-expanded="false">Berapa banyak platform yang tersedia?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="qb"><div><p>30 platform: 18 platform Indonesia, 8 platform global, dan 4 platform freelance &amp; remote. Semuanya bisa diakses dari satu halaman pencarian.</p></div></div></div>
+        <div class="q"><button class="qh" aria-expanded="false">Apakah bisa membuat CV di dalam aplikasi?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="qb"><div><p>Bisa. CV Studio punya tiga mode: menyusun CV baru dari profil master, mengoptimasi CV lama poin per poin, dan menyesuaikan CV untuk lowongan tertentu.</p></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="gabung"><div class="wr">
+  <div class="cta-box">
+    <div><h2>Siap Meluncur ke Karier Impianmu?</h2><p>Bergabung sekarang dan kendalikan perjalanan kariermu.</p></div>
+    <a class="btn btn-gold btn-lg" href="#masuk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg> Gabung Misi Sekarang <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+  </div>
+</div></section>
+
+<footer id="masuk"><div class="wr">
+  <div class="fg">
+    <div>
+      <a class="brand" href="#beranda"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span><span>Astronaut Jobs</span></a>
+      <p class="tagline">Kendalikan perjalanan kariermu, melampaui batas.</p>
+    </div>
+    <div><h4>Navigasi</h4><ul><li><a href="#beranda">Beranda</a></li><li><a href="#fitur">Fitur</a></li><li><a href="#platform">Platform</a></li><li><a href="#testimoni">Testimoni</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+    <div><h4>Kontak</h4><ul class="kt">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>hello@astronautjobs.id</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+62 812-3456-7890</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Jakarta, Indonesia</span></li>
+    </ul></div>
+    <div><h4>Ikuti Kami</h4><div class="soc">
+      <a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a>
+      <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+      <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+      <a href="https://tiktok.com" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+    </div></div>
+  </div>
+  <p class="copy">© 2026 Astronaut Jobs. Semua Hak Dilindungi.</p>
+</div></footer>
+</div>
+
+<script>
+(function(){
+  var lp=document.getElementById('lp');
+  // star field
+  var c=document.getElementById('stars'),x=c.getContext('2d');
+  function draw(){var w=c.width=innerWidth,h=c.height=innerHeight;x.clearRect(0,0,w,h);var n=Math.round(w*h/6500);
+    for(var i=0;i<n;i++){var r=Math.random();var s=r<.85?Math.random()*1.1+.3:Math.random()*1.6+1;x.globalAlpha=Math.random()*.6+.25;
+      x.fillStyle=r<.9?'#dfe8ff':'#ffe3a2';x.beginPath();x.arc(Math.random()*w,Math.random()*h,s,0,6.283);x.fill();}
+    x.globalAlpha=1;}
+  draw();var t;addEventListener('resize',function(){clearTimeout(t);t=setTimeout(draw,150)});
+  // nav
+  var nav=document.getElementById('nav');
+  function onS(){nav.classList.toggle('solid',scrollY>24)}onS();addEventListener('scroll',onS,{passive:true});
+  var burger=document.getElementById('burger'),mob=document.getElementById('mob');
+  burger.addEventListener('click',function(){var o=mob.classList.toggle('open');burger.setAttribute('aria-expanded',o);nav.classList.toggle('solid',o||scrollY>24)});
+  mob.addEventListener('click',function(e){if(e.target.tagName==='A'){mob.classList.remove('open');burger.setAttribute('aria-expanded','false')}});
+  // active link
+  var links=[].slice.call(document.querySelectorAll('.nl a'));var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  function act(){var y=scrollY+120,cur=0;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i});links.forEach(function(a,i){a.classList.toggle('on',i===cur)})}
+  addEventListener('scroll',act,{passive:true});act();
+  // smooth scroll
+  lp.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var el=document.querySelector(a.getAttribute('href'));if(!el)return;e.preventDefault();
+    var top=el.getBoundingClientRect().top+scrollY-84;scrollTo({top:top,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})});
+  // faq
+  document.getElementById('faqlist').addEventListener('click',function(e){var b=e.target.closest('.qh');if(!b)return;var q=b.parentNode,open=q.classList.toggle('open');b.setAttribute('aria-expanded',open)});
+})();
+</script>
+</body>
+</html>
