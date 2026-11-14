@@ -1,6 +1,6 @@
 # Panduan Deploy — Astronaut Jobs Landing Page
 
-Situs ini statis: cukup `index.html` + folder `assets/`. Tidak perlu Node, build, atau database.
+Situs ini statis: cukup `index.html` (gambar latar sudah tertanam di dalamnya). Tidak perlu Node, build, atau database.
 
 ## 1. GitHub Pages
 
@@ -20,8 +20,7 @@ Setiap `git push` ke `main` otomatis memperbarui situs.
 4. Klik kanan file zip → **Extract** ke `public_html/`. Hasilnya harus:
    ```
    public_html/index.html
-   public_html/assets/hero-rocket.png
-   public_html/assets/favicon.svg
+   public_html/assets/og-image.jpg
    public_html/.htaccess
    ```
 5. Hapus file zip, lalu buka domain kamu di browser.
