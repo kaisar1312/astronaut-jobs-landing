@@ -263,18 +263,43 @@ body[data-view="auth"] .nav-actions .back-only{display:inline-flex}
 .searchbar input:focus,.searchbar select:focus,.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(79,227,245,.15)}
 .searchbar input::placeholder,.field input::placeholder,.field textarea::placeholder{color:#6e7f8f}
 select option{background:#071221}
-.cat-row{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 14px}
-.cat-row .chip{cursor:pointer;transition:border-color .2s,background .2s}
-.cat-row .chip.on,.cat-row .chip:hover{border-color:var(--line-2);background:rgba(79,227,245,.1);color:#fff}
-.platforms{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
-.platform{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 14px 14px 16px;border:1px solid rgba(255,255,255,.1);border-radius:16px;background:rgba(255,255,255,.045);min-width:0;transition:transform .25s,border-color .25s,background .25s}
-.platform:hover{transform:translateY(-3px);border-color:var(--line-2);background:rgba(79,227,245,.07)}
-.platform span{min-width:0}
-.platform b{display:block;font-weight:800;font-size:14.5px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.platform small{display:block;color:var(--dim);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.platform .go{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:50%;border:1px solid var(--line-2);color:#fff;background:rgba(6,20,34,.6);transition:background .25s,color .25s,border-color .25s}
-.platform .go .i{width:15px;height:15px}
-.platform:hover .go{background:linear-gradient(90deg,#ffc24d,#ff8a24);color:var(--gold-ink);border-color:transparent}
+.pf-head{text-align:center;max-width:760px;margin:0 auto 30px}
+.pf-head h2{font-family:var(--font-d);font-weight:900;font-style:italic;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(28px,4vw,50px);line-height:1.05}
+.pf-head .spark{color:var(--orange);font-style:normal;font-size:.55em;vertical-align:middle;filter:drop-shadow(0 0 8px rgba(255,140,40,.7))}
+.pf-head .sub{color:var(--mut);font-size:16px;margin:14px auto 0;max-width:56ch}
+.pf-tabs{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:16px;background:var(--glass-flat);backdrop-filter:blur(14px);overflow:hidden;margin-bottom:26px}
+.pf-tabs button{position:relative;display:flex;align-items:center;justify-content:center;gap:8px;padding:16px 10px;font-weight:700;font-size:14.5px;color:#cfdbe6;transition:color .2s,background .2s}
+.pf-tabs button:hover{color:#fff;background:rgba(255,255,255,.04)}
+.pf-tabs button::after{content:"";position:absolute;left:14%;right:14%;bottom:0;height:3px;border-radius:3px 3px 0 0;background:linear-gradient(90deg,var(--amber),var(--orange-2));transform:scaleX(0);transition:transform .25s}
+.pf-tabs button.on{color:var(--orange)}
+.pf-tabs button.on::after{transform:scaleX(1)}
+.pf-feat{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:34px}
+.pf-card{position:relative;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:20px;padding:26px 22px 22px;border:1.5px solid rgba(255,160,70,.42);border-radius:18px;background:linear-gradient(150deg,rgba(14,30,48,.85),rgba(6,14,26,.9));box-shadow:0 0 30px rgba(255,140,40,.08),var(--shadow);transition:transform .25s,border-color .25s,box-shadow .25s;min-width:0}
+.pf-card:hover{transform:translateY(-4px);border-color:var(--orange);box-shadow:0 0 40px rgba(255,140,40,.22),var(--shadow)}
+.pf-rank{position:absolute;top:10px;left:12px;display:flex;align-items:center;gap:4px;font-size:11.5px;font-weight:800;color:var(--orange)}
+.pf-rank .i{width:13px;height:13px;fill:currentColor;stroke:none}
+.pf-logo{width:76px;height:76px;border-radius:16px;display:grid;place-items:center;font-family:var(--font-d);font-weight:900;font-size:30px;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 10px 24px rgba(0,0,0,.4)}
+.pf-card h3{font-family:var(--font-b);font-weight:800;font-size:22px;letter-spacing:-.01em}
+.pf-card p{color:#c9d6e0;font-size:14px;margin-top:4px}
+.pf-card .btn{padding:.8em 1.2em;font-size:14px}
+.pf-group{margin-top:30px}
+.pf-ghead{display:flex;align-items:center;gap:10px;margin-bottom:14px;color:var(--orange);font-family:var(--font-d);font-weight:800;font-size:15px;letter-spacing:.06em;text-transform:uppercase}
+.pf-ghead::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(255,150,60,.55),rgba(255,150,60,.15));margin-left:6px}
+.pf-ghead .dot{width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 10px var(--orange);order:2}
+.pf-ghead small{color:var(--dim);font-family:var(--font-b);letter-spacing:0;text-transform:none;font-weight:600;font-size:12.5px}
+.pf-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.pf-tile{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:118px;padding:18px 10px 16px;border:1px solid rgba(255,255,255,.12);border-radius:16px;background:linear-gradient(160deg,rgba(14,28,44,.8),rgba(6,14,26,.86));text-align:center;transition:transform .25s,border-color .25s,background .25s;min-width:0}
+.pf-tile:hover{transform:translateY(-4px);border-color:rgba(255,160,70,.6);background:linear-gradient(160deg,rgba(26,30,40,.9),rgba(10,14,24,.9))}
+.pf-wm{font-family:var(--font-d);font-weight:800;font-size:21px;letter-spacing:-.02em;line-height:1.1;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pf-tile small{color:#aebdc9;font-size:12.5px}
+.pf-tile .go{position:absolute;right:10px;bottom:9px;color:var(--orange)}
+.pf-tile .go .i{width:16px;height:16px}
+.pf-note{display:flex;align-items:center;gap:16px;margin-top:34px;padding:20px 24px;border:1px solid var(--line);border-radius:18px;background:var(--glass-flat)}
+.pf-note .i{width:40px;height:40px;color:var(--orange);flex:none}
+.pf-note p{color:#c9d6e0;font-style:italic;font-size:14.5px}
+.content .pf-tabs{margin-top:18px}
+.content .pf-grid{grid-template-columns:repeat(4,1fr)}
+.content .pf-feat{grid-template-columns:1fr}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .step{padding:26px 24px;border-radius:20px;background:var(--glass);border:1px solid var(--line);box-shadow:var(--shadow);transition:transform .3s,border-color .3s;min-width:0}
 .step:hover{transform:translateY(-5px);border-color:var(--line-2)}
@@ -366,7 +391,8 @@ select option{background:#071221}
 @media (max-width:1279.98px){
   .navlinks{display:none}.menu-btn{display:grid}
   .section{padding-block:72px 10px}
-  .platforms{grid-template-columns:repeat(3,1fr)}
+  .pf-grid,.content .pf-grid{grid-template-columns:repeat(3,1fr)}
+  .pf-feat{grid-template-columns:1fr}
   .steps{grid-template-columns:repeat(2,1fr)}
   .faq-grid{grid-template-columns:1fr;gap:26px}.faq-grid .section-head{position:static}
   .searchbar{grid-template-columns:1fr 1fr}.searchbar .btn{grid-column:span 2}
@@ -382,13 +408,17 @@ select option{background:#071221}
   body[data-view="app"] .nav-actions .app-only:not(.danger){display:none}
   .nav-actions .btn{padding:.7em 1.1em;font-size:14px}
   .section-head{display:block}.section-head .btn{margin-top:16px}
-  .platforms{grid-template-columns:1fr 1fr;gap:8px}
-  .panel{padding:16px}
-  .platform{position:relative;padding:12px 12px 12px 14px}
-  .platform b{font-size:13.5px;padding-right:16px}
-  .platform .go{position:absolute;top:9px;right:9px;width:auto;height:auto;border:0;background:none;color:var(--dim)}
-  .platform .go .i{width:13px;height:13px}
-  .platform:hover .go{background:none;color:var(--amber)}
+  .pf-grid,.content .pf-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .pf-tabs{grid-template-columns:1fr 1fr}
+  .pf-tabs button{font-size:13.5px;padding:13px 6px}
+  .pf-card{grid-template-columns:auto 1fr;gap:14px;padding:30px 16px 16px}
+  .pf-card .btn{grid-column:1/-1;width:100%}
+  .pf-logo{width:60px;height:60px;font-size:24px}
+  .pf-card h3{font-size:19px}
+  .pf-tile{min-height:104px}
+  .pf-wm{font-size:18px}
+  .pf-note{padding:16px}
+  .pf-note .i{width:32px;height:32px}
   .steps{grid-template-columns:1fr}
   .searchbar{grid-template-columns:1fr}.searchbar .btn{grid-column:auto}
   .end-cta{display:block;padding:24px}.end-cta .btn{margin-top:18px;width:100%}
@@ -435,6 +465,11 @@ body[data-artifact] .print-only{display:none}
   <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M15 9V5.5A1.5 1.5 0 0 0 13.5 4h-8A1.5 1.5 0 0 0 4 5.5v8A1.5 1.5 0 0 0 5.5 15H9"/></symbol>
   <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4.5 7h15M9 7V4.5h6V7M7 7l.8 13h8.4L17 7M10 11v5M14 11v5"/></symbol>
   <symbol id="i-printer" viewBox="0 0 24 24"><path d="M7 8V4h10v4M7 17H4.5v-6a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v6H17M7 14h10v6H7z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.4 3 7.9 7 9.5 4-1.6 7-5.1 7-9.5V6z"/><path d="m8.8 12.2 2.3 2.3 4.3-4.6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4M5 4.5h11l-2 3.8 2 3.7H5"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.3 3.6 5.2 3.6 8.5s-1.2 6.2-3.6 8.5c-2.4-2.3-3.6-5.2-3.6-8.5s1.2-6.2 3.6-8.5z"/></symbol>
+  <symbol id="i-laptop" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="10" rx="1.5"/><path d="M3 18.5h18"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.5-6.5-11a6.5 6.5 0 0 1 13 0c0 5.5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
 </svg>
 
@@ -521,27 +556,14 @@ body[data-artifact] .print-only{display:none}
   </section>
   </div>
 
-  <section class="section wrap" id="lowongan">
-    <div class="section-head rv">
-      <div><span class="tag"><i class="pulse"></i> 30+ platform dalam satu misi</span><h2>Temukan orbit <span class="grad">peluangmu.</span></h2><p class="sub">Satu kata kunci, satu lokasi, lalu pilih platform mana pun. Pencarian terbuka langsung di situs resminya, kamu yang menekan tombol kirim.</p></div>
-      <button class="btn" onclick="openAuth('signup')">Simpan ke Pelacakan <svg class="i"><use href="#i-arrow"/></svg></button>
+  <section class="section wrap pf" id="lowongan">
+    <div class="pf-head rv">
+      <h2><span class="spark">✦</span> Temukan Platform <span class="grad">Kerja Terbaik</span> <span class="spark">✦</span></h2>
+      <p class="sub">Jelajahi platform kerja tepercaya. Setiap tombol langsung membuka halaman daftar atau masuk di situs resminya.</p>
     </div>
-    <div class="glass panel rv">
-      <form class="searchbar" onsubmit="event.preventDefault();renderPlatforms('landing')">
-        <input id="keyword" placeholder="Posisi atau kata kunci, mis. Product Manager" autocomplete="off">
-        <input id="location" placeholder="Lokasi, mis. Jakarta atau Remote" autocomplete="off">
-        <select id="category" aria-label="Kategori platform"><option value="all">Semua kategori</option><option>Indonesia</option><option>Global</option><option>Freelance &amp; Remote</option></select>
-        <button class="btn primary" type="submit"><svg class="i"><use href="#i-search"/></svg> Cari Platform</button>
-      </form>
-      <div class="cat-row" id="platform" role="group" aria-label="Filter kategori">
-        <button type="button" class="chip on" data-cat="all" onclick="setCat('landing','all')">Semua · 30</button>
-        <button type="button" class="chip" data-cat="Indonesia" onclick="setCat('landing','Indonesia')">Indonesia · 16</button>
-        <button type="button" class="chip" data-cat="Global" onclick="setCat('landing','Global')">Global · 9</button>
-        <button type="button" class="chip" data-cat="Freelance &amp; Remote" onclick="setCat('landing','Freelance & Remote')">Freelance &amp; Remote · 5</button>
-      </div>
-      <div class="platforms" id="platform-list"></div>
-      <p class="note" style="margin-top:16px">Tautan membuka tab baru ke situs resmi setiap platform. Astronaut Jobs tidak mengirim lamaran atas namamu.</p>
-    </div>
+    <div class="pf-tabs rv" id="platform" role="tablist" aria-label="Kategori platform"></div>
+    <div id="platform-list" class="rv"></div>
+    <div class="pf-note rv"><svg class="i"><use href="#i-shield"/></svg><p>Tautan membuka situs resmi masing-masing platform. Astronaut Jobs tidak mengirimkan lamaran atas namamu.</p></div>
   </section>
 
   <section class="section wrap" id="cara">
@@ -591,59 +613,44 @@ body[data-artifact] .print-only{display:none}
 
 <script>
 /* ================= DATA ================= */
+/* auth: halaman daftar/masuk resmi; bila kosong, beranda resmi (punya tombol Daftar/Masuk) */
+const PF_CATS=[["Indonesia","flag"],["Global","globe"],["Remote & Freelance","laptop"]];
 const PLATFORMS=[
-  {id:"linkedin",name:"LinkedIn",cat:"Global",url:"https://www.linkedin.com/jobs/"},
-  {id:"indeed",name:"Indeed",cat:"Global",url:"https://id.indeed.com/"},
-  {id:"glassdoor",name:"Glassdoor",cat:"Global",url:"https://www.glassdoor.com/Job/"},
-  {id:"jooble",name:"Jooble",cat:"Global",url:"https://id.jooble.org/"},
-  {id:"grabjobs",name:"GrabJobs",cat:"Global",url:"https://grabjobs.co/"},
-  {id:"ziprecruiter",name:"ZipRecruiter",cat:"Global",url:"https://www.ziprecruiter.com/jobs"},
-  {id:"mycareersfuture",name:"MyCareersFuture",cat:"Global",url:"https://www.mycareersfuture.gov.sg/"},
-  {id:"jobisland",name:"JobIsland",cat:"Global",url:"https://jobisland.com/"},
-  {id:"wellfound",name:"Wellfound",cat:"Global",url:"https://wellfound.com/jobs"},
-  {id:"jobstreet",name:"Jobstreet",cat:"Indonesia",url:"https://www.jobstreet.co.id/"},
-  {id:"glints",name:"Glints",cat:"Indonesia",url:"https://glints.com/id"},
-  {id:"kalibrr",name:"Kalibrr",cat:"Indonesia",url:"https://www.kalibrr.id/"},
-  {id:"karir",name:"Karir.com",cat:"Indonesia",url:"https://www.karir.com/"},
-  {id:"dealls",name:"Dealls",cat:"Indonesia",url:"https://dealls.com/"},
-  {id:"cake",name:"Cake",cat:"Indonesia",url:"https://www.cake.me/"},
-  {id:"kitalulus",name:"KitaLulus",cat:"Indonesia",url:"https://www.kitalulus.com/"},
-  {id:"loker",name:"Loker.id",cat:"Indonesia",url:"https://www.loker.id/"},
-  {id:"urbanhire",name:"Urbanhire",cat:"Indonesia",url:"https://www.urbanhire.com/"},
-  {id:"qerja",name:"Qerja",cat:"Indonesia",url:"https://www.qerja.com/"},
-  {id:"jobindo",name:"Jobindo",cat:"Indonesia",url:"https://www.jobindo.com/"},
-  {id:"jobsid",name:"Jobs.id",cat:"Indonesia",url:"https://www.jobs.id/"},
-  {id:"karirpad",name:"Karirpad",cat:"Indonesia",url:"https://www.karirpad.com/"},
-  {id:"topkarir",name:"TopKarir",cat:"Indonesia",url:"https://www.topkarir.com/"},
-  {id:"bersamabumn",name:"BersamaBUMN",cat:"Indonesia",url:"https://bersamabumn.com/"},
-  {id:"disnakerja",name:"Disnakerja",cat:"Indonesia",url:"https://www.disnakerja.com/"},
-  {id:"upwork",name:"Upwork",cat:"Freelance & Remote",url:"https://www.upwork.com/"},
-  {id:"freelancer",name:"Freelancer",cat:"Freelance & Remote",url:"https://www.freelancer.com/"},
-  {id:"startupjobs",name:"Startup Jobs",cat:"Freelance & Remote",url:"https://startup.jobs/"},
-  {id:"remoteok",name:"RemoteOK",cat:"Freelance & Remote",url:"https://remoteok.com/"},
-  {id:"flexjobs",name:"FlexJobs",cat:"Freelance & Remote",url:"https://www.flexjobs.com/"}
+  {name:"JobStreet",cat:"Indonesia",url:"https://id.jobstreet.com/",tag:"Portal karier & lowongan kerja",bg:"linear-gradient(145deg,#1d4fd8,#0b2f9a)",mono:"J",wm:"#5b8cff",top:1},
+  {name:"Glints",cat:"Indonesia",url:"https://glints.com/id",auth:"https://glints.com/id/signup",tag:"Karier & pengembangan profesional",bg:"linear-gradient(145deg,#111,#2a2a2a)",mono:"★",wm:"#ffd23f",top:2},
+  {name:"Kalibrr",cat:"Indonesia",url:"https://www.kalibrr.id/",tag:"Platform rekrutmen tepercaya",bg:"linear-gradient(145deg,#1f6fe0,#1449a8)",mono:"K",wm:"#4f9bff",top:3},
+  {name:"Karir.com",cat:"Indonesia",url:"https://www.karir.com/",tag:"Cari karier, wujudkan mimpimu",bg:"linear-gradient(145deg,#1b3d7a,#0e2650)",mono:"Karir",wm:"#5aa2ff",top:4},
+  {name:"Loker.id",cat:"Indonesia",url:"https://www.loker.id/",wm:"#3d8bff"},
+  {name:"Cake",cat:"Indonesia",url:"https://www.cake.me/",auth:"https://www.cake.me/users/sign_up",wm:"#2fbf8f"},
+  {name:"Dealls",cat:"Indonesia",url:"https://dealls.com/",wm:"#7c6cff"},
+  {name:"KitaLulus",cat:"Indonesia",url:"https://www.kitalulus.com/",wm:"#9b7bff"},
+  {name:"Urbanhire",cat:"Indonesia",url:"https://www.urbanhire.com/",wm:"#33c3e6"},
+  {name:"Qerja",cat:"Indonesia",url:"https://www.qerja.com/",wm:"#ff8a3d"},
+  {name:"TopKarir",cat:"Indonesia",url:"https://www.topkarir.com/",wm:"#ff5c6c"},
+  {name:"Jobs.id",cat:"Indonesia",url:"https://www.jobs.id/",wm:"#3fb6ff"},
+  {name:"Karirpad",cat:"Indonesia",url:"https://www.karirpad.com/",wm:"#4fd1a5"},
+  {name:"Jobindo",cat:"Indonesia",url:"https://www.jobindo.com/",wm:"#ffb347"},
+  {name:"BersamaBUMN",cat:"Indonesia",url:"https://bersamabumn.com/",wm:"#5ea8ff"},
+  {name:"Disnakerja",cat:"Indonesia",url:"https://www.disnakerja.com/",wm:"#ff7a59"},
+  {name:"LinkedIn",cat:"Global",url:"https://www.linkedin.com/",auth:"https://www.linkedin.com/signup",wm:"#ffffff"},
+  {name:"Indeed",cat:"Global",url:"https://id.indeed.com/",auth:"https://secure.indeed.com/auth",wm:"#3b6dff"},
+  {name:"Glassdoor",cat:"Global",url:"https://www.glassdoor.com/",auth:"https://www.glassdoor.com/profile/login_input.htm",wm:"#3ecf8e"},
+  {name:"Monster",cat:"Global",url:"https://www.monster.com/",wm:"#9b5cf6"},
+  {name:"SimplyHired",cat:"Global",url:"https://www.simplyhired.com/",wm:"#e8eef5"},
+  {name:"ZipRecruiter",cat:"Global",url:"https://www.ziprecruiter.com/",auth:"https://www.ziprecruiter.com/login",wm:"#5fd38d"},
+  {name:"Wellfound",cat:"Global",url:"https://wellfound.com/",auth:"https://wellfound.com/join",wm:"#ff6b6b"},
+  {name:"Jooble",cat:"Global",url:"https://id.jooble.org/",wm:"#4fb3ff"},
+  {name:"GrabJobs",cat:"Global",url:"https://grabjobs.co/",wm:"#3fd17a"},
+  {name:"MyCareersFuture",cat:"Global",url:"https://www.mycareersfuture.gov.sg/",wm:"#ff6b7d"},
+  {name:"Upwork",cat:"Remote & Freelance",url:"https://www.upwork.com/",auth:"https://www.upwork.com/nx/signup/",wm:"#14a800"},
+  {name:"Fiverr",cat:"Remote & Freelance",url:"https://www.fiverr.com/",auth:"https://www.fiverr.com/join",wm:"#ffffff"},
+  {name:"Toptal",cat:"Remote & Freelance",url:"https://www.toptal.com/",auth:"https://www.toptal.com/talent/apply",wm:"#5b8cff"},
+  {name:"FlexJobs",cat:"Remote & Freelance",url:"https://www.flexjobs.com/",wm:"#ff8a3d"},
+  {name:"Freelancer",cat:"Remote & Freelance",url:"https://www.freelancer.com/",auth:"https://www.freelancer.com/signup",wm:"#29b2fe"},
+  {name:"RemoteOK",cat:"Remote & Freelance",url:"https://remoteok.com/",wm:"#ff5c8a"}
 ];
 const STAGES=[["saved","Tersimpan"],["applied","Melamar"],["interview","Wawancara"],["offer","Penawaran"],["rejected","Ditolak"]];
 const STOP=new Set("yang dan untuk dengan atau dari the and for with you our will are this that di ke pada serta juga kami kamu anda your have has not can able akan dalam oleh sebagai".split(" "));
-
-function searchUrl(p,kw,loc){
-  const q=encodeURIComponent((kw||"").trim()),l=encodeURIComponent((loc||"").trim());
-  if(!q)return p.url;
-  switch(p.id){
-    case"linkedin":return`https://www.linkedin.com/jobs/search/?keywords=${q}&location=${l||"Indonesia"}`;
-    case"indeed":return`https://id.indeed.com/jobs?q=${q}&l=${l}`;
-    case"jooble":return`https://id.jooble.org/SearchResult?ukw=${q}`;
-    case"remoteok":return`https://remoteok.com/remote-${q.replace(/%20/g,"-").toLowerCase()}-jobs`;
-    case"glassdoor":return`https://www.glassdoor.com/Search/results.htm?keyword=${q}`;
-    case"ziprecruiter":return`https://www.ziprecruiter.com/jobs-search?search=${q}&location=${l}`;
-    case"upwork":return`https://www.upwork.com/nx/search/jobs/?q=${q}`;
-    case"freelancer":return`https://www.freelancer.com/jobs/?keyword=${q}`;
-    case"glints":return`https://glints.com/id/opportunities/jobs/explore?keyword=${q}&country=ID`;
-    case"jobstreet":return`https://www.jobstreet.co.id/id/${q.replace(/%20/g,"-").toLowerCase()}-jobs`;
-    case"kalibrr":return`https://www.kalibrr.id/id-ID/job-board/te/${q}`;
-    default:return p.url;
-  }
-}
 
 /* ================= HELPERS ================= */
 const $=s=>document.querySelector(s);
@@ -661,7 +668,7 @@ function icon(id,cls="i"){return`<svg class="${cls}"><use href="#i-${id}"/></svg
 
 /* ================= VIEWS ================= */
 let currentUser=null,appTab="dashboard";
-const cats={landing:"all",app:"all"};
+const pfTab={landing:"top",app:"top"};
 function showView(name){["landing","auth","app"].forEach(v=>{$("#view-"+v).hidden=v!==name});document.body.dataset.view=name;toggleMenu(false);window.scrollTo({top:0,behavior:"instant"})}
 function showLanding(){showView("landing");syncNav()}
 function toggleMenu(force){const m=$("#mobile-menu"),b=document.querySelector(".menu-btn");const open=typeof force==="boolean"?force:!m.classList.contains("open");m.classList.toggle("open",open);b.setAttribute("aria-expanded",String(open))}
@@ -722,9 +729,9 @@ function dashboardHTML(j,p){const n=k=>j.filter(x=>x.status===k).length;
   <div class="sub-panel"><h4>Langkah berikutnya</h4><p class="muted">${p.skills||p.experience?"Profilmu sudah terisi. Coba Fit Check untuk lowongan target, atau susun draf CV.":"Lengkapi profil agar Fit Check dan CV Studio bisa bekerja dengan data nyata milikmu."}</p>
   <div class="form-actions">${p.skills||p.experience?`<button class="btn primary" onclick="go('fit')">${icon("target")} Fit Check</button><button class="btn" onclick="go('cv')">${icon("wand")} CV Studio</button>`:`<button class="btn primary" onclick="go('profile')">${icon("user")} Lengkapi Profil</button><button class="btn" onclick="go('explore')">${icon("compass")} Jelajahi Platform</button>`}</div></div>
   <h4>Lamaran terbaru</h4><div class="job-list">${j.length?j.slice(0,4).map(jobCard).join(""):'<div class="empty">Belum ada lamaran tersimpan. Jelajahi platform dan catat peluang pertamamu.</div>'}</div>`}
-function exploreHTML(){return`<h3>Jelajah 30+ Platform</h3><p class="muted">Pencarian dibuka di situs resmi platform. Simpan peluang yang menarik ke pelacakan.</p>
-  <form class="searchbar" style="margin-top:18px" onsubmit="event.preventDefault();renderPlatforms('app')"><input id="app-keyword" placeholder="Posisi atau kata kunci" autocomplete="off"><input id="app-location" placeholder="Lokasi" autocomplete="off"><select id="app-category" aria-label="Kategori"><option value="all">Semua kategori</option><option>Indonesia</option><option>Global</option><option>Freelance &amp; Remote</option></select><button class="btn primary" type="submit">${icon("search")} Cari</button></form>
-  <div id="app-platforms" class="platforms" style="margin-top:14px"></div>
+function exploreHTML(){return`<h3>Jelajah 30+ Platform</h3><p class="muted">Setiap tombol membuka halaman daftar atau masuk di situs resmi platform. Catat lowongan yang menarik ke pelacakan.</p>
+  <div class="pf-tabs" id="app-pf-tabs" role="tablist" aria-label="Kategori platform"></div>
+  <div id="app-platforms"></div>
   <h4>Catat lowongan yang ditemukan</h4>
   <form class="form-grid" onsubmit="event.preventDefault();addJob()"><div class="field"><label for="new-role">Posisi</label><input id="new-role" placeholder="Product Designer"></div><div class="field"><label for="new-company">Perusahaan</label><input id="new-company" placeholder="Nama perusahaan"></div><div class="field"><label for="new-source">Sumber platform</label><input id="new-source" placeholder="LinkedIn, Jobstreet, dll."></div><div class="field"><label for="new-link">Tautan lowongan</label><input id="new-link" type="url" placeholder="https://…"></div><div class="form-actions field full"><button class="btn primary" type="submit">${icon("plus")} Simpan ke Pelacakan</button></div></form>`}
 function addJob(){const role=$("#new-role").value.trim(),company=$("#new-company").value.trim();if(!role&&!company){toast("Isi posisi atau perusahaan terlebih dahulu.");return}
@@ -773,15 +780,17 @@ function generateCV(){const p=getProfile();if(!p.experience&&!p.skills&&!p.educa
 function copyCV(){const el=$("#cv-text"),t=el.innerText;const sel=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);toast("Teks dipilih, tekan Ctrl+C / Cmd+C untuk menyalin.")};
   if(navigator.clipboard?.writeText){navigator.clipboard.writeText(t).then(()=>toast("Draf CV disalin.")).catch(sel)}else sel()}
 
-/* ---- landing: platforms ---- */
-function setCat(scope,cat){cats[scope]=cat;document.querySelectorAll("#platform .chip").forEach(c=>c.classList.toggle("on",c.dataset.cat===cat));if(scope==="landing"){$("#category").value=cat==="all"?"all":cat}renderPlatforms(scope)}
-function renderPlatforms(scope){const land=scope==="landing";
-  const kw=$(land?"#keyword":"#app-keyword")?.value||"",loc=$(land?"#location":"#app-location")?.value||"",sel=$(land?"#category":"#app-category")?.value||"all";
-  const cat=land?sel:sel;if(land)cats.landing=cat,document.querySelectorAll("#platform .chip").forEach(c=>c.classList.toggle("on",c.dataset.cat===cat));
-  const list=PLATFORMS.filter(p=>cat==="all"||p.cat===cat);
-  const el=$(land?"#platform-list":"#app-platforms");if(!el)return;
-  el.innerHTML=list.map(p=>`<a class="platform" target="_blank" rel="noopener" href="${esc(searchUrl(p,kw,loc))}" aria-label="Buka ${p.name} di tab baru"><span><b>${p.name}</b><small>${p.cat}</small></span><span class="go">${icon("ext")}</span></a>`).join("")}
-function searchFrom(q){$("#keyword").value=q;$("#category").value="all";renderPlatforms("landing");$("#lowongan").scrollIntoView({behavior:"smooth",block:"start"});toast(`Mencari "${q}" di 30+ platform.`)}
+/* ---- platforms (landing + app) ---- */
+const pfLink=p=>esc(p.auth||p.url);
+const pfTile=p=>`<a class="pf-tile" target="_blank" rel="noopener" href="${pfLink(p)}" aria-label="Daftar atau masuk ke ${esc(p.name)} (tab baru)"><span class="pf-wm" style="color:${p.wm}">${esc(p.name)}</span><small>Daftar / Masuk</small><span class="go">${icon("ext")}</span></a>`;
+const pfCard=p=>`<a class="pf-card" target="_blank" rel="noopener" href="${pfLink(p)}" aria-label="Daftar atau masuk ke ${esc(p.name)} (tab baru)"><span class="pf-rank">${icon("star")} 0${p.top}</span><span class="pf-logo" style="background:${p.bg};${p.mono.length>2?"font-size:20px":""}">${esc(p.mono)}</span><span style="min-width:0"><h3>${esc(p.name)}</h3><p>${esc(p.tag)}</p></span><span class="btn primary">Daftar / Masuk ${icon("ext")}</span></a>`;
+const pfGroup=([cat,ic])=>{const l=PLATFORMS.filter(p=>p.cat===cat);return`<div class="pf-group"><div class="pf-ghead">${icon(ic)}${cat} <small>${l.length} platform</small><span class="dot"></span></div><div class="pf-grid">${l.map(pfTile).join("")}</div></div>`};
+function renderPlatforms(scope){const land=scope==="landing",tab=pfTab[scope];
+  const tabs=[["top","star","Unggulan"],...PF_CATS.map(([c,ic])=>[c,ic,c])];
+  const tabsEl=land?$("#platform"):$("#app-pf-tabs"),el=$(land?"#platform-list":"#app-platforms");if(!el||!tabsEl)return;
+  tabsEl.innerHTML=tabs.map(([id,ic,l])=>`<button type="button" role="tab" aria-selected="${tab===id}" class="${tab===id?"on":""}" data-tab="${id}" onclick="pfTab['${scope}']='${id}';renderPlatforms('${scope}')">${icon(ic)} ${l}</button>`).join("");
+  el.innerHTML=tab==="top"?`<div class="pf-feat">${PLATFORMS.filter(p=>p.top).sort((a,b)=>a.top-b.top).map(pfCard).join("")}</div>${PF_CATS.map(pfGroup).join("")}`:pfGroup(PF_CATS.find(c=>c[0]===tab))}
+function searchFrom(q){pfTab.landing="top";renderPlatforms("landing");$("#lowongan").scrollIntoView({behavior:"smooth",block:"start"});toast(`Daftar di platform pilihan untuk melamar posisi ${q}.`)}
 
 /* ================= AMBIENT ================= */
 const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
